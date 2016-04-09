@@ -1,11 +1,15 @@
 module CharitiesHelper
+
+end
+
+class VolunteerMatchApi
   def initialize
     @account_name = account_name
     @api_key = api_key
   end
 
   def hello_world(name)
-    call :hellowWorld, {:name => name}.to_json
+    call :helloWorld, {:name => name}.to_json
   end
 
   protected
@@ -26,7 +30,6 @@ module CharitiesHelper
     raise "HTTP error code #{res.code}" unless res.code == "200"
     OpenStruct.new(JSON.parse res.body)
   end
-
 end
 
 api = VolunteerMatchApi.new(account_name, api_key)
