@@ -1,7 +1,7 @@
 class CharitiesController < ApplicationController
 
   def index
-    @events =
+    # @events =
   end
 
   def create
