@@ -15,3 +15,11 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+$(document).ready(function() {
+    $('#geolocate').on('click', showMap);
+});
+
+var showMap = function(event){
+  console.log("YES!!!");
+  $('#map').css('visibility', 'visible');
+}

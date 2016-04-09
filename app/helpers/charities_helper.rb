@@ -14,7 +14,7 @@ end
 class VolunteerMatchApi
   def initialize(account_name, api_key)
     @account_name = account_name
-    @api_key = api
+    @api_key = api_key
   end
 
   def hello_world(name)
