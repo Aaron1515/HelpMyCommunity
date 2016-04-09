@@ -15,20 +15,20 @@
  */
 
 body { margin:0; padding:0; }
-#map { position:absolute; top:0; bottom:0; width:100%; }
+#map { position:absolute; top:0; bottom:0; width:100%; visibility:hidden;}
 
 .ui-button {
-  background:#3887BE;
+  background:#14A9FF;
   color:#FFF;
   display:block;
   position:absolute;
-  top:50%;left:50%;
-  width:160px;
+  top:30%;left:50%;
+  width:120px;
   margin:-20px 0 0 -80px;
   z-index:100;
   text-align:center;
   padding:10px;
-  border:1px solid rgba(0,0,0,0.4);
+
   border-radius:3px;
   }
   .ui-button:hover {
@@ -36,5 +36,26 @@ body { margin:0; padding:0; }
     color:#fff;
     }
 
+#welcome-title {
+  background-image: url("FinalPhotoSMALLER.png");
+  background-repeat:no-repeat;
+  box-sizing: border-box;
+  width: 775px;
+  height: 667px;
+  }
+
+.proxima{
+  font-family: montserrat;
+  text-align: center;
+  width: 375px;
+}
+
+h1.proxima{
+  font-size: 45px;
+}
+p.proxima{
+  margin-top: -25px;
+
+}
 @import "bootstrap-sprockets"
 @import "bootstrap"
