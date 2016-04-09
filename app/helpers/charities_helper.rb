@@ -1,11 +1,20 @@
+
+require 'rubygems'
+require 'base64'
+require 'digest/sha2'
+require 'net/http'
+require 'uri'
+require 'json'
+require 'ostruct'
+
 module CharitiesHelper
 
 end
 
 class VolunteerMatchApi
-  def initialize
-    @account_name = @user_name
-    @api_key = @volunteer_key
+  def initialize(account_name, api_key)
+    @account_name = account_name
+    @api_key = api_key
   end
 
   def hello_world(name)
@@ -32,7 +41,7 @@ class VolunteerMatchApi
   end
 end
 
-api = VolunteerMatchApi.new(account_name, api_key)
+api = VolunteerMatchApi.new(ENV['VOLUNTEER_NAME'], ENV['VOLUNTEER_KEY'])
 response = api.hello_world("VolunteerMatch") # JSON {"name":"VolunteerMatch","result":"Hello VolunteerMatch!"}
 puts response.name # "VolunteerMatch"
 puts response.result # "Hello VolunteerMatch!"
