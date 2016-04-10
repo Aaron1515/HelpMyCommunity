@@ -3,6 +3,7 @@
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+<script type="text/javascript" src="dbc.js"></script>
 
 <div id="welcome-title">
     <h1 class="proxima">Volunteer Match</h1>
@@ -18,6 +19,16 @@ var geolocate = document.getElementById('geolocate');
 var map = L.mapbox.map('map', 'mapbox.streets');
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
+var marker = L.marker([37.78489, -122.39751]);
+var popup = "American Red Cross"
+marker.bindPopup(popup);
+marker.addTo(map);
+var addressMarkerPopup = "Cystic Fibrosis Foundation"
+var addressMarker = L.geoJson(address);
+addressMarker.bindPopup(addressMarkerPopup);
+addressMarker.addTo(map);
+
+// L.geoJson(dbc).addTo(map);
 
 if (!navigator.geolocation) {
     geolocate.innerHTML = 'Geolocation is not available';
@@ -32,20 +43,20 @@ if (!navigator.geolocation) {
 // Once we've got a position, zoom and center the map
 // on it, and add a single marker.
 map.on('locationfound', function(e) {
-    map.fitBounds(e.bounds);
+    map.fitBounds([37.78489, -122.39751]);
 
-    myLayer.setGeoJSON({
-        type: 'Feature',
-        geometry: {
-            type: 'Point',
-            coordinates: [e.latlng.lng, e.latlng.lat]
-        },
-        properties: {
-            'title': 'Here I am!',
-            'marker-color': '#ff8888',
-            'marker-symbol': 'star'
-        }
-    });
+    // myLayer.setGeoJSON({
+    //     type: 'Feature',
+    //     geometry: {
+    //         type: 'Point',
+    //         coordinates: [e.latlng.lng, e.latlng.lat]
+    //     },
+    //     properties: {
+    //         'title': 'Here I am!',
+    //         'marker-color': '#ff8888',
+    //         'marker-symbol': 'star'
+    //     }
+    // });
 
     // And hide the geolocation button
     geolocate.parentNode.removeChild(geolocate);
@@ -57,3 +68,4 @@ map.on('locationerror', function() {
     geolocate.innerHTML = 'Position could not be found';
 });
 </script>
+

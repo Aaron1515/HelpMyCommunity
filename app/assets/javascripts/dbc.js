@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","features": [{"type":"Feature","geometry":{"type":"Point","coordinates":[-122.39751, 37.78489]},"properties":{"address":"633 Folsom St, SAN FRANCISCO, CA, 94107"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-122.40004, 37.788223]},"properties":{"address":"85 2nd St, SAN FRANCISCO, CA, 94105"}}]}
