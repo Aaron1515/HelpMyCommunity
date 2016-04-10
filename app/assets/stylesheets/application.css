@@ -18,6 +18,7 @@ body { margin:0; padding:0; }
 #map { position:absolute; top:0; bottom:0; width:100%; visibility:hidden;}
 
 .ui-button {
+  text-decoration: none;
   background:#14A9FF;
   color:#FFF;
   display:block;
@@ -45,16 +46,17 @@ body { margin:0; padding:0; }
   }
 
 .proxima{
-  font-family: montserrat;
+  font-family: Montserrat;
   text-align: center;
   width: 375px;
 }
 
 h1.proxima{
-  font-size: 45px;
+  font-size: 40px;
+  color: #14A9FF;
 }
 p.proxima{
-  margin-top: -25px;
+  margin-top: -20px;
 
 }
 @import "bootstrap-sprockets"
