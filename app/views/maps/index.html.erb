@@ -4,9 +4,13 @@
 <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
 
-
+<div id="welcome-title">
+    <h1 class="proxima">Volunteer Match</h1>
+    <p class="proxima">Find volunteer opportunities in your area</p>
+</div>
 <div id='map'></div>
-<a href='#' id='geolocate' class='ui-button'>Find me</a>
+
+<a href='#' id='geolocate' class='ui-button'>Match Me</a>
 
 <script>
 L.mapbox.accessToken = "<%= @map_box %>";
@@ -15,11 +19,6 @@ var map = L.mapbox.map('map', 'mapbox.streets');
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
 
-// This uses the HTML5 geolocation API, which is available on
-// most mobile browsers and modern browsers, but not in Internet Explorer
-//
-// See this chart of compatibility for details:
-// http://caniuse.com/#feat=geolocation
 if (!navigator.geolocation) {
     geolocate.innerHTML = 'Geolocation is not available';
 } else {
