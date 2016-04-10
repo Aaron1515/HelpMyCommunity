@@ -1,35 +1,24 @@
 module OpportunitiesHelper
   class Opportunity
-    attr_reader :parent_organization
+    attr_reader :parent_organization, :title
     def initialize(json_object)
       @response = json_object
+      @parent_organization =  @response[:parentOrg]
+      @title = @response["title"]
     end
-
-    # @parent_organization =  @response["parentOrg"]
-
-    # @title = @response["title"]
-
-    # if response["opportunities"][0]["availability"]["ongoing"]
-    #     @available_times = "ongoing"
-    # else
-    #     @available_times = [response["opportunities"][0]["availability"]["startDate"], response["opportunities"][0]["availability"]["endDate"]]
-    # end
-
-    #   # dates
-    #   #   if single day true then find the startDate,
-    #   #   else date= ongoing
-    #   # title
-    #   # location
   end
 end
 
 def separate_json(api_response)
   response_number = 0
+  opportunity_array = []
   p "*************************"
+
   while api_response["opportunities"][response_number]
-    OpportunitiesHelper::Opportunity.new(api_response["opportunities"][response_number])
+   opportunity_array << OpportunitiesHelper::Opportunity.new(api_response["opportunities"][response_number])
     response_number += 1
     p response_number
     p "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
   end
+  opportunity_array
 end
