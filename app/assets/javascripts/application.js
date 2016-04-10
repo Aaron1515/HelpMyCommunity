@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-sprockets
 //= require_tree .
 
 $( document ).ready(function() {
@@ -45,4 +44,7 @@ $( document ).ready(function() {
             modal.style.display = "none";
         }
 }
+
+$("#welcome-back").on("swipeleft",function(){
+    $(this).hide();
 });

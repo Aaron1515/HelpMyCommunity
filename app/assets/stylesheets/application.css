@@ -71,8 +71,25 @@ p.proxima{
   font-family: Montserrat;
 }
 
-/*#event_sign_up{
-
-  font-size: 30px;
+#welcome-back{
+ background-image: url("VolunTinder.png");
+  background-repeat:no-repeat;
+/*  margin-top: -27px;*/
+  margin-left: 10%;
+  margin-top: 20%;
+  width: 920px;
+  height: 1700px;
+  position: relative;
 }
-*/
+
+#middle{
+
+  position: absolute;
+  margin-top: 170px;
+  margin-left: 10%;
+  width: 600px;
+}
+
+div#middle h1{
+  font-size: 60px;
+}
