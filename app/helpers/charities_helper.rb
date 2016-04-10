@@ -23,7 +23,7 @@ class VolunteerMatchApi
   end
 
   def opportunity_search(location, number_of_results)
-    call :searchOpportunities, {:location => location, :numberOfResults => 1}.to_json
+    call :searchOpportunities, {:location => location, :numberOfResults => number_of_results}.to_json
   end
 
   protected
