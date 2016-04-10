@@ -21,30 +21,15 @@ $( document ).ready(function() {
       $('#welcome-title').remove();
       $('#map').css("visibility", "visible");
     })
+    $(".0").on('click', function(){$('.0').hide();})
+    $(".1").on('click', function(){$('.1').hide();})
+    $(".2").on('click', function(){$('.2').hide();})
+    $(".3").on('click', function(){$('.3').hide();})
+    $(".4").on('click', function(){$('.4').hide();})
+    $(".5").on('click', function(){$('.5').hide();})
+    $(".6").on('click', function(){$('.6').hide();})
+    $(".7").on('click', function(){$('.7').hide();})
+    $(".8").on('click', function(){$('.8').hide();})
+    $(".9").on('click', function(){$('.9').hide();})
 
-    var modal = document.getElementById('myModal');
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-}
-
-$("#welcome-back").on("swipeleft",function(){
-    $(this).hide();
-});
+})
