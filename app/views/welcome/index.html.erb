@@ -1,0 +1,10 @@
+
+<% @opportunity_object_array.each_with_index do |x,y| %>
+
+  <div id="welcome-back" class="<%= y  %>">
+    <div id="middle" class="<%= y %>">
+      <h1 class="<%= y %>"><%= x.title %></h1>
+    </div>
+  </div>
+
+<% end %>
